@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Productos</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        h1 {
+            background: linear-gradient(to right, #f1e1a6, #f7a6c7);
+            color: #ffffff;
+            font-size: 36px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #f7a6c7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3 ease;
+        }
+
+        button:hover {
+            background-color: #f1e1a6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Productos</h1>
+
+    <form action="Procesar.php" method="post" enctype="multipart/form-data">
+        <label for="clave">Clave del Producto</label><br>
+        <input type="text" name="txtid" required><br>
+
+        <label for="nombre">Nombre del Producto</label><br>
+        <input type="text" name="txtnombre" required><br>
+
+        <label for="precio">Precio</label><br>
+        <input type="number" name="txtprecio" step="0.1" required><br>
+
+        <label for="cantidad">Cantidad</label><br>
+        <input type="number" name="txtcantidad" required><br>
+
+        <label for="imagen">Imagen del Producto</label><br>
+        <input type="file" name="imagen" accept="image/*" required><br>
+
+        <button type="submit">Agregar Producto</button><br>
+    </form>
+</body>
+</html>
